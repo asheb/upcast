@@ -145,6 +145,8 @@
                 { from: {foo: 'bar'},    to: [{foo: 'bar'}] },
                 { from: 'foo',           to: ['f', 'o', 'o'] },
                 { from: '',              to: [] },
+                { from: 'true',          to: [true] },
+                { from: 'false',         to: [false] },
                 { from: undefined,       to: [] }
             ]);
 
@@ -163,6 +165,8 @@
                 { from: {foo: 'bar'},    to: true },
                 { from: 'foo',           to: true },
                 { from: '',              to: false },
+                { from: 'true',          to: true },
+                { from: 'false',         to: false },
                 { from: undefined,       to: false }
             ]);
 
@@ -180,6 +184,8 @@
                 {foo: 'bar'},
                 'foo',
                 '',
+                'true',
+                'false',
                 undefined
             ]);
 
@@ -198,6 +204,8 @@
                 { from: {foo: 'bar'},    to: null },
                 { from: 'foo',           to: null },
                 { from: '',              to: null },
+                { from: 'true',          to: null },
+                { from: 'false',         to: null },
                 { from: undefined,       to: null }
             ]);
 
@@ -218,6 +226,8 @@
                 { from: {foo: 'bar'},    to: NaN },
                 { from: 'foo',           to: 0 },
                 { from: '',              to: 0 },
+                { from: 'true',          to: 1 },
+                { from: 'false',         to: 0 },
                 { from: undefined,       to: 0 }
             ]);
 
@@ -235,6 +245,8 @@
                 { from: {foo: 'bar'},    to: {foo: 'bar'} },
                 { from: 'foo',           to: {0: 'f', 1: 'o', 2: 'o'} },
                 { from: '',              to: Object('') },
+                { from: 'true',          to: Object(true) },
+                { from: 'false',         to: Object(false) },
                 { from: undefined,       to: {} }
             ]);
 
@@ -252,6 +264,8 @@
                 { from: {foo: 'bar'},    to: '[object Object]' },
                 { from: 'foo',           to: 'foo' },
                 { from: '',              to: '' },
+                { from: 'true',          to: 'true' },
+                { from: 'false',         to: 'false' },
                 { from: undefined,       to: '' }
             ]);
 
@@ -270,6 +284,8 @@
                 { from: {foo: 'bar'},    to: undefined },
                 { from: 'foo',           to: undefined },
                 { from: '',              to: undefined },
+                { from: 'true',          to: undefined },
+                { from: 'false',         to: undefined },
                 { from: undefined,       to: undefined }
             ]);
 
